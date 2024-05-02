@@ -30,12 +30,14 @@ The only thing I added is the add-drop-table option for mysqldump.
 3. Delete uncompressed database backup file
 4. Backup Matomo's files
 5. Removing old backups
+6. Upload via rsync Over SSH to a remote host 
 
 ## What do you need
 
 - **NO root access. Yeh!**
 - Terminal access
 - The tar extension
+- a SSH access and a second host (or an accessible NAS) to upload backup.
 
 ## How to use this script
 
