@@ -77,9 +77,10 @@ In the future there will be a restore bash script. (See [roadmap](#roadmap))
 ## Tested shared hosting's
 
 - [x] Mittwald - Webhosting XL 11.0 - SSD
+- [x] O2Switch.fr - Scale'UP
 
 ## Roadmap
 
 - [ ] A script to automatic restore a backup file
 - [ ] Finding a more secure solution to store database credentials
-- [ ] Save backups on remote server via SSH
+- [x] Save backups on remote server via SSH
