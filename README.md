@@ -44,6 +44,7 @@ The only thing I added is the add-drop-table option for mysqldump.
 - You also have to customized the database credentials in the .database.config.cnf file. You can find your Matomo credentials under /config/config.ini.php
 - For security reasons I recommend to keep the repository files and backup files outside the public folder. The public folder is usually /var/www
 - When you have customized the config files you can do both, make a manually backup or create automatic backups via a cronjob
+- Add a cron task to automatically perform your backup: 0 0 * * * cd matomo-backup-restore/ && sh matomo_backup.sh > /path/to/log/matomo-logs/backup.log (must exists)
 
 ### Arguments
 
