@@ -49,3 +49,8 @@ fileNameBackupDb="${currentDate}_matomo-db.sql"
 # TODO: Your Matomo database name
 matomoDatabase='myMatomoDatabaseName'
 
+# TODO: SSH server
+remoteBackup='user@example.com'
+
+# TODO: Remote path
+remotePath='/path/to/remote/backup/directory'
