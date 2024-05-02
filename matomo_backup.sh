@@ -19,7 +19,7 @@ errorecho() { cat <<< "$@" 1>&2; }
 #
 # Print information
 #
-echo "Backup directory: ${backupMainDir}"
+echo "Backup directory: ${backupMainDir}" `date "+%d-%m-%Y %T"`
 
 
 #
@@ -44,7 +44,6 @@ if ! [ -x "$(command -v mysqldump)" ]; then
 	errorecho "ERROR: No backup of database possible!"
 else
 	mysqldump --defaults-extra-file=config/.database.config.cnf "${matomoDatabase}" > "${backupdir}/${fileNameBackupDb}"
-
 	echo
 	echo "1.1 Compress database backup with tar and gzip..."
 	tar -cpzf "${backupdir}/${currentDate}_matomo-db.tar.gz" -C ${backupdir} ${fileNameBackupDb}
@@ -87,6 +86,7 @@ then
 	fi
 fi
 
+rsync -e ssh -avz ${backupdir}/* ${remoteBackup}:${remotePath}
 echo
 echo "DONE!"
 echo "Backup created: ${backupdir}"
