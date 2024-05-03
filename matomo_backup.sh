@@ -19,7 +19,7 @@ errorecho() { cat <<< "$@" 1>&2; }
 #
 # Print information
 #
-echo "Backup directory: ${backupMainDir}" `date "+%d-%m-%Y %T"`
+echo "Backup directory: ${backupMainDir}" ${currentDate}
 
 
 #
